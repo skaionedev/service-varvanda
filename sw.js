@@ -16,7 +16,7 @@ self.addEventListener('fetch', event => {
 
   event.respondWith(
     fetch(request, {
-      // mode: 'no-cors',
+      mode: 'no-cors',
       // credentials: 'include'
     })
       .then(response => {
