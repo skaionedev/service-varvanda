@@ -5,6 +5,7 @@ self.addEventListener('install', () => {
 self.addEventListener('fetch', event => {
   if (event.request.method !== 'GET') return
   if (event.request.url.includes('.ico')) return
+  if (event.request.url.includes('.jsx')) return
   if (event.request.url.includes('react')) return
   if (event.request.url.includes('vite')) return
   if (event.request.url.includes('.js')) return
