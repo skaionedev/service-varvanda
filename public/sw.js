@@ -1,6 +1,6 @@
-// self.addEventListener('install', () => {
-//   self.skipWaiting()
-// })
+self.addEventListener('install', () => {
+  self.skipWaiting()
+})
 
 self.addEventListener('fetch', event => {
   const url = new URL(event.request.url)
@@ -11,12 +11,12 @@ self.addEventListener('fetch', event => {
     url.protocol = 'https'
   }
 
-  if (isTargetURL) console.log(event.request)
+  // if (isTargetURL) console.log(event.request)
   const request = new Request(url, event.request)
 
   event.respondWith(
     fetch(request, {
-      mode: 'no-cors'
+      // mode: 'no-cors'
       // credentials: 'include'
     })
       .then(response => {

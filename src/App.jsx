@@ -5,14 +5,17 @@ import {
   useLocation
 } from 'react-router-dom'
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: '*',
+      element: <HelloWorld />
+    }
+  ],
   {
-    path: '*',
-    element: <HelloWorld />
+    basename: '/service-varvanda/'
   }
-], {
-  basename: '/service-varvanda/'
-})
+)
 export const App = () => {
   return <RouterProvider router={router} />
 }
@@ -31,5 +34,16 @@ function HelloWorld() {
     triggerFetch()
   }, [location])
 
-  return <>Hello World</>
+  return (
+    <div
+      style={{
+        height: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+      }}
+    >
+      <h1>Hello World</h1>
+    </div>
+  )
 }
