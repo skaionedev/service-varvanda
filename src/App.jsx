@@ -10,6 +10,14 @@ const router = createBrowserRouter(
     {
       path: '*',
       element: <HelloWorld />
+    },
+    {
+      path: '/',
+      element: <HelloWorld />
+    },
+    {
+      path: '/vip',
+      element: <HelloWorld />
     }
   ],
   {
