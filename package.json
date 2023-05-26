@@ -2,7 +2,7 @@
   "name": "vite-proxy",
   "private": true,
   "version": "1.0.0",
-  "homepage": "https://skaionedev.github.io/service-varvanda/",
+  "homepage": "https://skaionedev.github.io/service-varvanda",
   "type": "module",
   "scripts": {
     "dev": "vite",

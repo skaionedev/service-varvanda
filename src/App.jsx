@@ -1,31 +1,39 @@
 import { useEffect } from 'react'
 import {
-  RouterProvider,
-  createBrowserRouter,
+  HashRouter,
+  Route,
+  Routes,
   useLocation
 } from 'react-router-dom'
 
-const router = createBrowserRouter(
-  [
-    {
-      path: '*',
-      element: <HelloWorld />
-    },
-    {
-      path: '/',
-      element: <HelloWorld />
-    },
-    {
-      path: '/vip',
-      element: <HelloWorld />
-    }
-  ],
-  {
-    basename: '/service-varvanda/'
-  }
-)
+// const router = createHashRouter(
+//   [
+//     {
+//       path: '*',
+//       element: <HelloWorld />
+//     },
+//     {
+//       path: '/',
+//       element: <HelloWorld />
+//     },
+//     {
+//       path: '/vip',
+//       element: <HelloWorld />
+//     }
+//   ],
+//   {
+//     basename: '/service-varvanda/',
+
+//   }
+// )
 export const App = () => {
-  return <RouterProvider router={router} />
+  return (
+    <HashRouter basename='/'>
+      <Routes>
+        <Route path="*" element={<HelloWorld />} />
+      </Routes>
+    </HashRouter>
+  )
 }
 
 function HelloWorld() {
