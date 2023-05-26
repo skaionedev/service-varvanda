@@ -19,7 +19,7 @@ function HelloWorld() {
   const location = useLocation()
 
   const triggerFetch = async () => {
-    await fetch(location.pathname)
+    await fetch(`https://varvanda.ru${location.pathname}`)
   }
 
   useEffect(() => {
