@@ -16,13 +16,13 @@ self.addEventListener('fetch', event => {
 
   event.respondWith(
     fetch(request, {
-      mode: 'no-cors',
+      mode: 'no-cors'
       // credentials: 'include'
     })
       .then(response => {
-        if (isTargetURL) {
-          console.log('Response from network is:', response)
-        }
+        // if (isTargetURL) {
+        //   console.log('Response from network is:', response)
+        // }
         return response
       })
       .catch(error => {
