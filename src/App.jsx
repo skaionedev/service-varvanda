@@ -19,7 +19,10 @@ function HelloWorld() {
   const location = useLocation()
 
   const triggerFetch = async () => {
-    await fetch(`https://varvanda.ru${location.pathname}`)
+    const path = location.pathname.replace('/service-varvanda', '')
+    await fetch(`https://varvanda.ru${path}`, {
+      mode: 'no-cors',
+    })
   }
 
   useEffect(() => {
