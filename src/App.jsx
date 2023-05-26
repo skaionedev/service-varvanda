@@ -18,12 +18,12 @@ export const App = () => {
 function HelloWorld() {
   const location = useLocation()
 
-  const triggerFetch = async () => {
-    await fetch(`https://varvanda.ru${location.pathname}`)
-  }
+  // const triggerFetch = async () => {
+  //   await fetch(`https://varvanda.ru${location.pathname}`)
+  // }
 
   useEffect(() => {
-    triggerFetch()
+    // triggerFetch()
   }, [location])
 
   return <>Hello World</>
